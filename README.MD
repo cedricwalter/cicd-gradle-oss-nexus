@@ -88,5 +88,5 @@ repositories {
 if gradlew can not be read in travis, run
 
 ```
-git update-index --chmod=+x gradlew"# cicd-gradle-oss-nexus" 
+git update-index --chmod=+x gradlew
 ```
