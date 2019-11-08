@@ -2,15 +2,17 @@ os: linux
 dist: xenial
 language: java
 jdk: openjdk8
-
-script: ./gradlew build publish
-
+script: "./gradlew build publish"
 deploy:
   provider: releases
-  api_key:  
-    secure: $GITHUB_OAUTH_TOKEN
+  api_key:
+    secure: "$GITHUB_OAUTH_TOKEN"
   file_glob: true
   file: build/**/*
   skip_cleanup: true
   on:
     tags: true
+env:
+  global:
+  - secure: ItSmLNVLGmNjhui6xFfUrp9ODFkPhR9P7KSbIAiC/h+/gTNM+fNzK/nfk9jaqVsggdrdqDJPH8kVKI2wc06oaashE0Pb+k2tuvI2IKN2xq7n/vdwFV5fJr+VnD2695MeP7RHRwEwfWfcizXwILQCGAKzh6qiWGwk/+jOhIxp3V70yDzRHS9X1USK0AaAkFHT93eYQhdmApcPm3aq+5/ZH6ZaQHUPfX/j4OKFvtZgzX2ebqtFN+9IJEcvB0nyaPuY4NV7WqpK5y3xpuOZpk+46zdqOEd6foFwOFTmCoZC0FV1MAsTHQ1DCbiKQOXfBo+z6LXL2L5LTV7fUe3nkPHyxyuVT8ADHevlBZbmJDdkPPa6/A9xITGYjPXs7q+TO/Wu37qIor9Po1Fm05ilJgBpdM++kjaIVzAMf8PlIl3YAWg0ei63jP02sBRqe16t2Dt+2bngxqvbzUQvlJIy0ZeTKVfIQgNrFKPoqB1k0nCdH5Pq5HEh+DQkO2PQLWfNEKe7WR2d0eH4ogLDxho0XtXQl3YUw2XaSbqRqc38an1V+NnGCMqGGzr5H7AK0a9I4UP+2X0IzMvqP85VORJNSAmuSYHRDkEwVm1aCqpnRG3UdgjUjXuamBrx5DxUUku4bHmKz1DrDnfKy1q3S1+iiCOCjhcSa3Pj/+QkvfVG7c4Bh2U=
+  - secure: pKfcdqt4x03NME0Q5q1gMhqAAp6+akCszEb1EoTPYsOt2A6JpSbUklaLvtLMh1VGvf4Fv6OGEADliBDcM5WkDpUd2aP2WFTc0/L8EHWOdFh+q6dGQuEbgnz2fb7yZglYoP5EOcSxpiOPLOeaPaRJiuqO85efC5wvMWMxBvJFe0L8CebGXlmteuE4kaVDICSKIVWUP1dPrRaSTRRKuYUce3fF/7Bpva/Ux/iXd4PienZqCwP+xyB2DS6bHwZqfmm64qbsDNSZbM2OaaKUpP5xj+p48mqvvphrt781hYfAPAcQFz5vDW53ezv8PrrbHQ3LD7TSofx/vNgwjYc4QPU8QF1p+WqCbEOlQJzf3aFM5mnj3Tos3ebYN24yuJWEZFrsdFYzg3nr8CE2/XTRKsS07lZESwr7rSWieZaR1cr8sOQ/FX2w00cgI3SEsI/Y5AI82rmpEJw+k6h4yWUO1bSqH8IDSfZtBTXZxZCL3cqoTv3UxGr22qGwHkHV7+oMnoThKvTBZGpaFYhM6s0hBRM2vaa7pjtgqP34yhJv2P98uxpxxZ3C2MlB/YhuhTuZpHgOBuDaiVwAOTDSSg6MAWSDRmC7fH6PVPzbXh+wuAP0ST1C75XL5UrSHRC2b8GwSnbaFYoAUV7DVLzK6jH/w9ZujwLCEakNFADeR6QwaIVvQf8=
