@@ -66,6 +66,8 @@ update the secure variable in .travis.yml to match YOUR project credential
 ```
 travis encrypt "GPG_SIGNING_KEY=5FDC21A9E64C767A38965D1EECDF662160A7D786" --add
 travis encrypt "GPG_SIGNING_PASSWORD=XXXXXXX" --add
+travis encrypt "OSSRH_USERNAME=..." --add
+travis encrypt "OSSRH_PASSWORD=..." --add
 ```
 Copy the generated GPG_SIGNING_KEY line from your global gradle.properties, value is way to large vor a secure variable, we need to set it as env variable
 ```
